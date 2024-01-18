@@ -5,9 +5,9 @@ print("changes marleen")
 
 print("testing 1")
 
-import hotdog as hot
+import hotdog
 
-#hot.addnum(1,5)
-print(hot.addnum(1))
+hotdog.addnum(1,5)
+
 
 

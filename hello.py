@@ -9,5 +9,6 @@ import hotdog
 
 hotdog.addnum(1,5)
 print("changes")
-hotdog.addnum(10,3)
+hotdog.addnum(6,9)
+
 

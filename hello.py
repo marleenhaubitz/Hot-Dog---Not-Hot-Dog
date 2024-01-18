@@ -10,5 +10,7 @@ import hotdog
 hotdog.addnum(1,5)
 print("changes")
 hotdog.addnum(6,9)
+print("Richard's line 13")
+print("Richard Line 14")
 
 

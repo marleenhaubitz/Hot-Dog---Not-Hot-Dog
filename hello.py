@@ -7,6 +7,7 @@ print("testing 1")
 
 import hotdog as hot
 
-hot.addnum(1,5)
+#hot.addnum(1,5)
+print(hot.addnum(1))
 
 

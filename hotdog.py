@@ -21,6 +21,13 @@ train_ds = keras.utils.image_dataset_from_directory(
     label_mode="int",
 )
 
+directory2 = "archive/test"
+test_ds = keras.utils.image_dataset_from_directory(
+    directory,
+    labels="inferred",
+    label_mode="int",
+)
+
 
 images_1 = plt.figure(figsize=(10, 10))
 for images, labels in train_ds.take(1):
@@ -30,7 +37,9 @@ for images, labels in train_ds.take(1):
         plt.title(int(labels[i]))
         plt.axis("off")
 
-plt.show()
+plt.show() 
+
+
 
 
 

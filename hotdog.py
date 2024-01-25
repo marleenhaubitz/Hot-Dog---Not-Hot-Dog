@@ -13,14 +13,17 @@ os.environ["KERAS_BACKEND"] = "tensorflow"
 import keras
 print("Keras version is: " + keras.__version__)
 
-directory = "archive/train"
 
+
+#Load Training Data
+directory = "archive/train"
 train_ds = keras.utils.image_dataset_from_directory(
     directory,
     labels="inferred",
     label_mode="int",
 )
 
+#Load Test Data
 directory2 = "archive/test"
 test_ds = keras.utils.image_dataset_from_directory(
     directory,
@@ -28,7 +31,7 @@ test_ds = keras.utils.image_dataset_from_directory(
     label_mode="int",
 )
 
-
+#Show the Training Images
 images_1 = plt.figure(figsize=(10, 10))
 for images, labels in train_ds.take(1):
     for i in range(9):
@@ -39,6 +42,7 @@ for images, labels in train_ds.take(1):
 
 plt.show() 
 
+#Show the Test Images 
 images_2 = plt.figure(figsize=(10, 10))
 for images, labels in test_ds.take(1):
     for i in range(9):

@@ -7,31 +7,29 @@
 
 import tensorflow as tf
 import numpy as np
+import matplotlib.pyplot as plt
 import os
 os.environ["KERAS_BACKEND"] = "tensorflow"
 import keras
 print("Keras version is: " + keras.__version__)
 
-directory = "fill"
+directory = "archive"
 
-keras.utils.image_dataset_from_directory(
+hotdog_images = keras.utils.image_dataset_from_directory(
     directory,
     labels="inferred",
     label_mode="int",
-    class_names=None,
-    color_mode="rgb",
-    batch_size=32,
-    image_size=(256, 256),
-    shuffle=True,
-    seed=None,
-    validation_split=None,
-    subset=None,
-    interpolation="bilinear",
-    follow_links=False,
-    crop_to_aspect_ratio=False,
-    data_format=None,
 )
 
+print(hotdog_images)
+
+plt.figure(figsize=(10, 10))
+for images, labels in hotdog_images.take(1):
+    for i in range(9):
+        ax = plt.subplot(3, 3, i + 1)
+        plt.imshow(np.array(images[i]).astype("uint8"))
+        plt.title(int(labels[i]))
+        plt.axis("off")
 
 
 

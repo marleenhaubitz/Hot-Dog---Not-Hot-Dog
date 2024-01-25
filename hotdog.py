@@ -12,12 +12,26 @@ os.environ["KERAS_BACKEND"] = "tensorflow"
 import keras
 print("Keras version is: " + keras.__version__)
 
+directory = "fill"
 
-train_hotdogs_path = "Hot-Dog---Not-Hot-Dog/archive/train/hot_dog"
-train_notdogs_path = "Hot-Dog---Not-Hot-Dog/archive/train/not_hot_dog"
+keras.utils.image_dataset_from_directory(
+    directory,
+    labels="inferred",
+    label_mode="int",
+    class_names=None,
+    color_mode="rgb",
+    batch_size=32,
+    image_size=(256, 256),
+    shuffle=True,
+    seed=None,
+    validation_split=None,
+    subset=None,
+    interpolation="bilinear",
+    follow_links=False,
+    crop_to_aspect_ratio=False,
+    data_format=None,
+)
 
-test_hotdogs_path = "Hot-Dog---Not-Hot-Dog/archive/test/hot_dog"
-test_notdogs_path = "Hot-Dog---Not-Hot-Dog/archive/test/not_hot_dog"
 
 
 

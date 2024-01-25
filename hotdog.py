@@ -8,12 +8,18 @@
 import tensorflow as tf
 import numpy as np
 import os
+os.environ["KERAS_BACKEND"] = "tensorflow"
+import keras
 print("Keras version is: " + keras.__version__)
 
 
-os.environ["KERAS_BACKEND"] = "tensorflow"
+train_hotdogs_path = "Hot-Dog---Not-Hot-Dog/archive/train/hot_dog"
+train_notdogs_path = "Hot-Dog---Not-Hot-Dog/archive/train/not_hot_dog"
 
-import keras
+test_hotdogs_path = "Hot-Dog---Not-Hot-Dog/archive/test/hot_dog"
+test_notdogs_path = "Hot-Dog---Not-Hot-Dog/archive/test/not_hot_dog"
+
+
 
 
 

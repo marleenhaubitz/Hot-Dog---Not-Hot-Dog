@@ -23,6 +23,7 @@ train_ds = keras.utils.image_dataset_from_directory(
     label_mode="int",
 )
 
+
 #Load Test Data
 directory2 = "archive/test"
 test_ds = keras.utils.image_dataset_from_directory(
@@ -30,6 +31,7 @@ test_ds = keras.utils.image_dataset_from_directory(
     labels="inferred",
     label_mode="int",
 )
+
 
 #Show the Training Images
 images_1 = plt.figure(figsize=(10, 10))
